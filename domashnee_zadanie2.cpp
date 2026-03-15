@@ -2,16 +2,20 @@
 
 #include <iostream>
 #include <string>
+#include <Windows.h>
+
 
 int main()
 
 {
-	setlocale(LC_ALL, "RU");
+	SetConsoleCP(1251);
+	SetConsoleOutputCP(1251);
 
-	std::string text;
-	std::cout << "Введите число: " << std::endl;
-	std::getline(std::cin, text);
-	std::cout << "Ваше число: " << std::endl << text << std::endl;
+
+	int nomer;
+	std::cout << "Введите слово : " << std::endl;
+	std::cin >> nomer;
+	std::cout << "Вы ввели : " << std::endl << nomer << std::endl;
 
 	return 0;
 }
